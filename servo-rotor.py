@@ -10,8 +10,6 @@ from struct import *
 port = 4533
 host='127.0.0.1'
 
-#some basic logging stuff to make stuff clearer	
-
 class MyTCPHandler(socketserver.BaseRequestHandler):
     def handle(self):
         quit=0
@@ -63,11 +61,6 @@ def update_serial(x,y):
     servo.setTarget(int(4),AZPW)
     servo.setTarget(int(5),ELPW)
     servo.close
-
-
-
-
-
 
 def main():
     try:
